@@ -1,0 +1,13 @@
+package com.hnv.augustine;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class AugustineApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
