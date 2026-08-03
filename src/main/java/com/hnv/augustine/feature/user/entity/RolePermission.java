@@ -1,9 +1,15 @@
 package com.hnv.augustine.feature.user.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "role_permissions")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class RolePermission {
     @Id
     private Integer id;

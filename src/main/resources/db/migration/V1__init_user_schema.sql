@@ -48,6 +48,7 @@ CREATE TABLE user_address (
     province    VARCHAR(50),
     ward        VARCHAR(50),
     detail      TEXT,
+    is_default BOOLEAN,
 PRIMARY KEY (id),
    CONSTRAINT fk_users_address_user
        FOREIGN KEY (user_id) REFERENCES users(id)

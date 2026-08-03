@@ -6,10 +6,13 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Nationalized;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -46,11 +49,21 @@ public class User implements UserDetails {
 
 
     @Column(name = "deleted_at")
-    private LocalDateTime deletedAt;
+    private LocalDateTime deletedAt = null;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
+        if(this.role == null){
+            return Collections.emptyList();
+        }
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + this.role.getName()));
+
+        this.role.getPermissions().forEach(permission -> {
+            authorities.add(new SimpleGrantedAuthority(permission.getPermission().getName()));
+        });
+
+        return authorities;
     }
 
     @Override
@@ -66,6 +79,6 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked(){
-        return this.locked;
+        return !this.locked;
     }
 }

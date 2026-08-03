@@ -1,0 +1,11 @@
+services:
+  redis-augustine:
+    image: redis:7-alpine
+    container_name: redis-augustine-service
+    restart: always
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis_data:/data
+volumes:
+  redis_data:

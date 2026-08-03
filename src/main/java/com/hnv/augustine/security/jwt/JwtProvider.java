@@ -1,0 +1,57 @@
+package com.hnv.augustine.security.jwt;
+
+import com.hnv.augustine.feature.user.entity.User;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtBuilder;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Component;
+
+import javax.crypto.SecretKey;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.util.Base64;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+@Component
+public class JwtProvider {
+    @Value("${jwt.secret}")
+    private String secretKey;
+    @Value("${jwt.access-expiration}")
+    private Long accessExpiration;
+
+    private SecretKey getSignerKey() {
+        byte[] decodedKey = Base64.getDecoder().decode(secretKey);
+        return Keys.hmacShaKeyFor(decodedKey);
+    }
+
+    public String generateJwtToken(Authentication authentication) {
+        String token = Jwts
+                .builder()
+                .subject(authentication.getName())
+                .claim("role", List.of("ROLE_" + ((User) authentication.getPrincipal()).getAuthorities()))
+                .issuer("hnv")
+                .issuedAt(Date.from(Instant.now()))
+                .expiration(Date.from(Instant.now().plusMillis(accessExpiration)))
+                .id(UUID.randomUUID().toString())
+                .signWith(getSignerKey(), SignatureAlgorithm.HS256)
+                .compact();
+        return token;
+    }
+
+    public Claims parseClaims(String token){
+        Claims claims = Jwts
+                .parser()
+                .verifyWith(getSignerKey())
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
+
+        return claims;
+    }
+}

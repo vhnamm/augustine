@@ -31,4 +31,6 @@ public class UserAddress {
     @Column(columnDefinition = "TEXT")
     private String detail;
 
+    @Column(name = "is_default")
+    private boolean isDefault;
 }
