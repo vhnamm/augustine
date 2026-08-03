@@ -6,6 +6,7 @@ import com.hnv.augustine.feature.auth.dto.RegisterRequest;
 import com.hnv.augustine.feature.auth.dto.RegisterResponse;
 
 public interface AuthenticationService {
-    LoginResponse login(LoginRequest loginRequest);
+    LoginResponse login(LoginRequest loginRequest, String clientIp, String userAgent);
     RegisterResponse register(RegisterRequest registerRequest);
+    void logout(String accessToken, String refreshToken);
 }

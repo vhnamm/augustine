@@ -1,5 +1,6 @@
 package com.hnv.augustine.security.jwt;
 
+import com.hnv.augustine.common.util.HeaderUtil;
 import com.hnv.augustine.feature.auth.service.TokenBlacklistService;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
@@ -32,8 +33,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     {
         log.info("start Jwt Authentication Filter");
         //check token in header
-        String authorizationHeader = request.getHeader("Authorization");
-        if(authorizationHeader == null || !authorizationHeader.startsWith("Bearer ")){
+        String authorizationHeader = HeaderUtil.extractBearerToken(request);
+
+        if(authorizationHeader == null){
             filterChain.doFilter(request, response);
             return;
         }
