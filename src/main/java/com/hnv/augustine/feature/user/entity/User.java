@@ -24,6 +24,7 @@ import java.util.List;
 @Builder
 public class User implements UserDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(length = 50,  nullable = false, unique = true)

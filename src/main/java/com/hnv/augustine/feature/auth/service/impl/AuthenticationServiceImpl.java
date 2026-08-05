@@ -3,11 +3,10 @@ package com.hnv.augustine.feature.auth.service.impl;
 import com.hnv.augustine.common.exception.AppException;
 import com.hnv.augustine.common.exception.ErrorCode;
 import com.hnv.augustine.common.redis.RedisService;
-import com.hnv.augustine.feature.auth.dto.LoginRequest;
-import com.hnv.augustine.feature.auth.dto.LoginResponse;
-import com.hnv.augustine.feature.auth.dto.RegisterRequest;
-import com.hnv.augustine.feature.auth.dto.RegisterResponse;
+import com.hnv.augustine.feature.auth.dto.*;
+import com.hnv.augustine.feature.auth.entity.RefreshToken;
 import com.hnv.augustine.feature.auth.service.AuthenticationService;
+import com.hnv.augustine.feature.auth.service.OtpService;
 import com.hnv.augustine.feature.auth.service.RefreshTokenService;
 import com.hnv.augustine.feature.auth.service.TokenBlacklistService;
 import com.hnv.augustine.feature.user.entity.Role;
@@ -24,14 +23,17 @@ import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.time.Duration;
 import java.time.Instant;
 
 @Service
@@ -45,6 +47,12 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private final RoleRepository roleRepository;
     private final RefreshTokenService refreshTokenService;
     private final TokenBlacklistService tokenBlacklistService;
+    private final PasswordEncoder passwordEncoder;
+    private final RedisService redisService;
+    private final OtpService otpService;
+
+    @Value("${otp.expiration}")
+    private Long PENDING_USER_TTL;
 
     @Override
     @Transactional
@@ -66,21 +74,59 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .build();
     }
 
+    @Override
     @Transactional
-    public RegisterResponse register(RegisterRequest registerRequest){
+    public void register(RegisterRequest registerRequest){
         //đẩy nghiệp vụ check exist cho DB(unique constraint tránh concurency)
         log.info("Register Request: {}", registerRequest);
-        try{
-            Role role = roleRepository.findByName("USER").orElseThrow(() -> new AppException(ErrorCode.ROLE_NOTFOUND));
-            User user = userMapper.toUser(registerRequest);
-            user.setRole(role);
-
-            User saved = userRepository.save(user);
-
-            return userMapper.toRegisterResponse(saved);
-
-        }catch (DataIntegrityViolationException ex){
+        if(userRepository.existsByEmail(registerRequest.getEmail())){ //ko write nen ko bi concurency
             throw new AppException(ErrorCode.USER_ALREADY_EXISTS);
+        }
+
+        String password = passwordEncoder.encode(registerRequest.getPassword());
+
+        PendingRegistrationDto pendingRegistration = PendingRegistrationDto
+                .builder()
+                .email(registerRequest.getEmail())
+                .passwordHash(password)
+                .fullName(registerRequest.getFullName())
+                .build();
+
+        redisService.set("auth:pending-regis:" + registerRequest.getEmail(),
+                pendingRegistration,
+                Duration.ofMillis(PENDING_USER_TTL)
+        );
+
+        otpService.generateAndSendOTP(registerRequest.getEmail(), "Xác thực đăng ký tài khoản Augustine");
+    }
+
+    @Transactional
+    @Override
+    public RegisterResponse confirm(ConfirmationRequest confirmationRequest){
+        otpService.verifyOTP(confirmationRequest.getEmail(), confirmationRequest.getOtp());
+
+        String key = "auth:pending-regis:" + confirmationRequest.getEmail();
+        PendingRegistrationDto pendingRegistration = redisService.get(key, PendingRegistrationDto.class);
+        if(pendingRegistration == null){
+            throw new AppException(ErrorCode.PENDING_REGIS_NOT_FOUND);
+        }
+
+        Role r = roleRepository.findByName("USER").orElseThrow(() -> new AppException(ErrorCode.ROLE_NOTFOUND));
+        User user = User.builder()
+                .email(pendingRegistration.getEmail())
+                .role(r)
+                .password(pendingRegistration.getPasswordHash())
+                .fullName(pendingRegistration.getFullName())
+                .build();
+
+        //tranh concurency
+        try{
+            userRepository.save(user);
+            return userMapper.toRegisterResponse(user);
+        }catch (DataIntegrityViolationException e){
+            throw new AppException(ErrorCode.USER_ALREADY_EXISTS);
+        }finally {
+            redisService.delete(key);
         }
     }
 
@@ -108,5 +154,24 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         }
 
         SecurityContextHolder.clearContext();
+    }
+
+    @Override
+    @Transactional
+    public LoginResponse refresh( String refreshToken) {
+        log.info("Refresh Token Request");
+
+        //kiem tra RT
+        RefreshToken rt = refreshTokenService.verifyAndGet(refreshToken);
+        User user = rt.getUser();
+
+        Authentication authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+
+        String newAccessToken = jwtProvider.generateJwtToken(authentication);
+
+        return LoginResponse.builder()
+                .accessToken(newAccessToken)
+                .refreshToken(refreshToken)
+                .build();
     }
 }

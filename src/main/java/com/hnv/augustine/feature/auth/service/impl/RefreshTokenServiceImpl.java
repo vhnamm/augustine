@@ -1,5 +1,7 @@
 package com.hnv.augustine.feature.auth.service.impl;
 
+import com.hnv.augustine.common.exception.AppException;
+import com.hnv.augustine.common.exception.ErrorCode;
 import com.hnv.augustine.common.util.DigestUtil;
 import com.hnv.augustine.feature.auth.entity.RefreshToken;
 import com.hnv.augustine.feature.auth.repository.RefreshTokenRepository;
@@ -11,6 +13,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -45,5 +48,23 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
         }
         String tokenHash = DigestUtil.sha256(rawToken);
         refreshTokenRepository.deleteById(tokenHash);
+    }
+
+    @Override
+    public RefreshToken verifyAndGet(String rawToken) {
+        if (rawToken == null || rawToken.isBlank()) {
+            throw new AppException(ErrorCode.UNAUTHENTICATED);
+        }
+        String tokenHash = DigestUtil.sha256(rawToken);
+        RefreshToken refreshToken = refreshTokenRepository.findWithUserByTokenHash(tokenHash).orElseThrow(
+                () -> new AppException(ErrorCode.UNAUTHENTICATED)
+        );
+
+        if(Instant.now().isAfter(refreshToken.getExpiredAt())){
+            refreshTokenRepository.deleteById(tokenHash);
+            throw new AppException(ErrorCode.UNAUTHENTICATED);
+        }
+
+        return refreshToken;
     }
 }

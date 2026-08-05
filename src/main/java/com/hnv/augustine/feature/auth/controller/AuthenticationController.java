@@ -1,12 +1,11 @@
 package com.hnv.augustine.feature.auth.controller;
 
 import com.hnv.augustine.common.dto.ApiResponse;
+import com.hnv.augustine.common.exception.AppException;
+import com.hnv.augustine.common.exception.ErrorCode;
 import com.hnv.augustine.common.util.CookieUtil;
 import com.hnv.augustine.common.util.HeaderUtil;
-import com.hnv.augustine.feature.auth.dto.LoginRequest;
-import com.hnv.augustine.feature.auth.dto.LoginResponse;
-import com.hnv.augustine.feature.auth.dto.RegisterRequest;
-import com.hnv.augustine.feature.auth.dto.RegisterResponse;
+import com.hnv.augustine.feature.auth.dto.*;
 import com.hnv.augustine.feature.auth.service.AuthenticationService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -16,6 +15,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.Instant;
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -57,16 +58,30 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody @Valid RegisterRequest registerRequest){
-        RegisterResponse response = authenticationService.register(registerRequest);
+        authenticationService.register(registerRequest);
 
         ApiResponse<RegisterResponse> apiResponse = ApiResponse.<RegisterResponse>builder()
-                .code(HttpStatus.CREATED.value())
-                .message("Đăng ký thành công")
-                .data(response)
+                .code(HttpStatus.OK.value())
+                .success(true)
+                .message("Vui lòng kiểm hộp thư để xác nhận mã OTP at " + Instant.now().toString())
                 .build();
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(apiResponse);
+        return ResponseEntity.status(HttpStatus.OK).body(apiResponse);
 
+    }
+
+    @PostMapping("/confirm")
+    public ResponseEntity<?> confirm(@RequestBody @Valid ConfirmationRequest confirmationRequest){
+        RegisterResponse registerResponse = authenticationService.confirm(confirmationRequest);
+
+        ApiResponse<RegisterResponse> response = ApiResponse.<RegisterResponse>builder()
+                .success(true)
+                .message("Đăng ký tài khoản thành công")
+                .data(registerResponse)
+                .code(HttpStatus.CREATED.value())
+                .build();
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
    @PostMapping("/logout")
@@ -81,10 +96,33 @@ public class AuthenticationController {
        authenticationService.logout(accessToken, refreshToken);
 
        // 2. Xóa Cookie ở Browser Client
-     CookieUtil.deleteCookie(httpServletResponse, "refreshToken");
+     CookieUtil.deleteCookie(httpServletResponse, "refreshToken", "/api/v1/auth");
 
-       // 3. Trả về 204 No Content (Không có body)
        return ResponseEntity.noContent()
                .build();
+   }
+
+   @PostMapping("/refresh")
+    public ResponseEntity<?> refresh(
+           HttpServletResponse httpServletResponse,
+            @CookieValue(name = "refreshToken",  required = false) String refreshToken
+   )
+   {
+        try {
+            LoginResponse loginResponse = authenticationService.refresh(refreshToken);
+            ApiResponse<LoginResponse> response = ApiResponse.<LoginResponse>builder()
+                    .message("Refresh token thành công")
+                    .success(true)
+                    .data(loginResponse)
+                    .build();
+
+            return ResponseEntity.status(HttpStatus.OK).body(response);
+        }catch (AppException ex){
+            if (ex.getErrorCode() == ErrorCode.UNAUTHENTICATED) {
+                CookieUtil.deleteCookie(httpServletResponse, "refreshToken", "/api/v1/auth");
+            }
+            throw ex;
+        }
+
    }
 }

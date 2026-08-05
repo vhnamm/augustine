@@ -19,7 +19,7 @@ public class TokenBlacklistServiceImpl implements com.hnv.augustine.feature.auth
     }
 
     public void blacklist(String tokenJti, Instant expiration){
-        Duration remainingTTL = Duration.between(expiration, Instant.now());
+        Duration remainingTTL = Duration.between(Instant.now(), expiration);
         if(!remainingTTL.isNegative() &&  !remainingTTL.isZero()){
             redisService.set(PREFIX + tokenJti, true, remainingTTL);
         }

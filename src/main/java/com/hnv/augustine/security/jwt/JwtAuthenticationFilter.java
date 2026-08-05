@@ -40,11 +40,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             return;
         }
 
-        String token = authorizationHeader.substring(7);
-
         //Verify & set to SecurityContext
         try{
-            Claims claims = jwtProvider.parseClaims(token);
+            Claims claims = jwtProvider.parseClaims(authorizationHeader);
             String email = claims.getSubject();
             String jti = claims.getId();
 
@@ -73,5 +71,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
 
         filterChain.doFilter(request, response);
+    }
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getRequestURI();
+        return path.startsWith("/api/v1/auth");
+
     }
 }

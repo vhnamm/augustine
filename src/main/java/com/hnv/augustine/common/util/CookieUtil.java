@@ -38,11 +38,11 @@ public final class CookieUtil {
                 .findFirst();
     }
 
-    public static void deleteCookie(HttpServletResponse response, String name) {
+    public static void deleteCookie(HttpServletResponse response, String name, String path) {
         ResponseCookie cookie = ResponseCookie.from(name, "")
                 .httpOnly(true)
                 .secure(true)
-                .path("/")
+                .path(path)
                 .sameSite("Strict")
                 .maxAge(0)
                 .build();
