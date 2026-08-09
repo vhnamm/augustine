@@ -1,0 +1,138 @@
+$bg-color: #f8fafc;
+$card-bg: #1f1f1f;
+$text-color: #111827;
+$text-muted: #64748b;
+$accent-font: "Times New Roman", serif;
+$base-font: 'Helvetica Neue', sans-serif;
+
+.addressPage {
+  background-color: $bg-color;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: $text-color;
+  font-family: $base-font;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  margin-bottom: 40px;
+  .backBtn {
+    display: inline-block;
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: $text-color;
+    font-size: 1.6rem;
+    font-family: $accent-font;
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+    
+    &:hover {
+      scale: 1.05;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 40px;
+
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .title {
+      font-family: $accent-font;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $text-color;
+      margin: 0;
+
+      .count {
+        color: $text-muted;
+        font-size: 1.2rem;
+        font-style: italic;
+        margin-left: 5px;
+      }
+    }
+
+    .editBtn {
+      background: none;
+      border: none;
+      color: $text-muted;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $text-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addressCard {
+  background-color: $card-bg;
+  border-radius: 8px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, background-color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($card-bg, 3%);
+    transform: translateY(-2px);
+  }
+
+  .infoCol {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 0 0 5px 0;
+      color: $text-color;
+    }
+
+    .phone, .address {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #9ca3af;
+      line-height: 1.4;
+    }
+  }
+
+  .actionCol {
+    .arrow {
+      color: $text-color;
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px;
+    
+    .infoCol {
+      .name { font-size: 0.95rem; }
+      .phone, .address { font-size: 0.85rem; }
+    }
+  }
+}

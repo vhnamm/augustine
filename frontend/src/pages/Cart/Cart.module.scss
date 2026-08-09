@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pageContainer {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #111827;
+  overflow-x: clip;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+
+.emptyStateWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.emptyIconBox {
+  position: relative;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.plusSign {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #f8fafc;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.emptyTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.emptyText {
+  font-size: 0.95rem;
+  color: #64748b;
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+.mainContent {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 80px;
+}
+
+.columnHeader {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+  border-bottom: 1px solid transparent;
+  padding: 80px 0 0 0;
+}
+
+.colTitle {
+  font-family: "IM FELL DW Pica";
+  font-weight: 500;
+  color: #111827;
+  font-size: 2rem;
+}
+
+.colCount {
+  color: #6b7280;
+  font-size: 1.6rem;
+}
+
+.productCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+  position: relative;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+    border: 1px solid #d1d5db;
+    background-size: 100% 100%, 300% 300%;
+    animation: gradientRotate 3s linear infinite;
+  }
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 1.6rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
+
+.productCount {
+  color: #111827;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 0%, 0% 50%;
+  }
+  50% {
+    background-position: 0% 0%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%, 0% 50%;
+  }
+}
+
+.imageBox {
+  width: 280px;
+  height: 340px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 10px;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.productName {
+  font-weight: 400;
+  color: #111827;
+}
+
+.product {
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+
+  &:hover {
+    color: #111827;
+  }
+}
+
+.variantInfo {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #111827;
+  font-size: 1.6rem;
+}
+
+.variantRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  max-width: 100%;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.qtyWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f8fafc;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 6px 12px;
+  gap: 16px;
+  color: #111827;
+
+  button {
+    background: none;
+    border: none;
+    color: #111827;
+    cursor: pointer;
+    font-size: 1.6rem;
+    &:hover {
+      color: #9ca3af;
+    }
+  }
+}
+
+.itemPrice {
+  font-weight: 500;
+}
+
+.rightColumn {
+  position: relative;
+}
+
+.stickyWrapper {
+  position: sticky;
+  top: 31px;
+  width: 100%;
+}
+
+.summaryCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 32px;
+  font-size: 1.6rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: #9ca3af;
+  font-size: 1.6rem;
+}
+
+.totalRow {
+  font-size: 1.6rem;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #333;
+  color: #111827;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+}
+
+.total {
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
+
+.checkoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 16px;
+  width: 100%;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e5e7eb;
+  }
+}
+
+ .backButton {
+  position: relative;
+  font-family:sans-serif;
+  top: 120px;
+  left: 183.6px;
+  z-index: 2;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #111827;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 8px 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+  }
+}
+
+.backArrow {
+  font-size: 2rem;
+}
+.continueBtn {
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  color: #111827;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #6b7280;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 440px;
+  width: 90%;
+  border: 1px solid #333;
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.modalText {
+  font-family: '"IM FELL DW Pica", serif';
+  font-size: 1.5rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+}
+
+.modalCancelBtn {
+  flex: 1;
+  padding: 14px;
+  background: transparent;
+  color: #111827;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #6b7280;
+    background-color: #222;
+  }
+}
+
+.modalConfirmBtn {
+  flex: 1;
+  padding: 14px;
+  background-color: #e5e7eb;
+  color: #111827;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #959595;
+  }
+}
+
+@media (max-width: 1024px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .productCard {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .imageBox {
+    width: 100%;
+    height: 300px;
+  }
+
+  .cardDetails {
+    gap: 16px;
+  }
+}

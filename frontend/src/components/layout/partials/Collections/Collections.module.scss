@@ -1,0 +1,65 @@
+.collections_wrap {
+  padding: 6px 12px;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  h2 {
+    color: #111827;
+    font-size: 1.8rem;
+    line-height: inherit;
+    font-weight: 400;
+  }
+}
+
+.collections_wrap {
+  &:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+  }
+  &:hover .collections_dropdown {
+    display: block;
+  }
+  .collections_dropdown {
+    display: none;
+    position: absolute;
+    top: 170%;
+    left: 0;
+    z-index: 999;
+  }
+}
+.collections_dropdown {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    left: 0;
+    top: -27px;
+    background-color: transparent;
+  }
+}
+.option_item {
+  font-size: 1.8rem;
+
+  &:hover {
+    background-color: #9ca3af;
+  }
+}
+
+.link {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary);
+}
+
+.icon {
+  margin-right: 12px;
+  color: #6b7280;
+  font-weight: lighter;
+}
+.collections_options {
+  border-radius: 3px;
+  overflow: hidden;
+}

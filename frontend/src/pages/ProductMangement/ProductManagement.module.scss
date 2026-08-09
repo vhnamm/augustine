@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+$bg-color: #f8fafc;   
+$card-bg: #151515;
+$input-bg: #f9fafb;
+$text-light: #e0e0e0;
+$text-dim: #797777;
+$border-color: #e5e7eb;
+$accent-color: #111827;
+$danger-color: #ff4d4f;
+$success-color: #52c41a;
+
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+    color: $text-light;
+    font-family: $font-sans;
+    padding: 2rem;
+    overflow-y: auto;
+    animation: fadeIn 0.5s ease-out;
+
+    &::-webkit-scrollbar { width: 6px; }
+    &::-webkit-scrollbar-thumb { background-color: $border-color; border-radius: 3px; }
+
+    @media (max-width: 768px) { padding: 1rem; }
+}
+.header {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;
+    h1 { font-family: $font-serif; font-size: 2rem; font-weight: 500; }
+    .actions {
+        display: flex; gap: 1rem;
+        button {
+            padding: 0.8rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; transition: 0.3s;
+            &.btnDraft { background: transparent; border: 1px solid $border-color; color: $text-light; &:hover { border-color: $text-light; }}
+            &.btnAdd { background: $text-light; color: $bg-color; border: 1px solid $text-light; &:hover { background: darken($text-light, 15%); border-color: darken($text-light, 15%); }}
+        }
+    }
+}
+
+.grid {
+    display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 4rem;
+    @media (max-width: 1024px) { grid-template-columns: 1fr; }
+}
+
+
+.card { background-color: $card-bg; border: 1px solid $border-color; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; h3 { font-family: $font-sans; font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: $text-light; }}
+.formGroup { margin-bottom: 1.5rem; label { display: block; font-size: 0.9rem; color: $text-dim; margin-bottom: 0.5rem; } input, textarea, select { width: 100%; background-color: $input-bg; border: 1px solid $border-color; border-radius: 4px; padding: 0.8rem; color: $text-light; outline: none; transition: 0.3s; &:focus { border-color: $text-light; } } textarea { min-height: 120px; resize: vertical; }}
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; @media (max-width: 600px) { grid-template-columns: 1fr; } }
+.uploadArea { width: 100%; aspect-ratio: 1/1; background-color: $input-bg; border: 2px dashed $border-color; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: $text-dim; margin-bottom: 1rem; img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; } }
+.thumbnailList { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; .thumb { aspect-ratio: 1/1; background-color: $input-bg; border: 1px solid $border-color; border-radius: 4px; display: flex; align-items: center; justify-content: center; overflow: hidden; img { width: 100%; height: 100%; object-fit: cover; } &.addThumb { color: $text-dim; cursor: pointer; &:hover { color: $text-light; border-color: $text-light; }}} }
+.sizeSelector { display: flex; gap: 0.8rem; .sizeOption { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid $border-color; border-radius: 4px; cursor: pointer; color: $text-dim; &.active { background: $text-light; color: $bg-color; border-color: $text-light; font-weight: 600; } } }
+.genderSelector { display: flex; gap: 2rem; margin-top: 0.5rem; label { display: flex; align-items: center; cursor: pointer; color: $text-light; input { margin-right: 0.5rem; accent-color: $text-light; width: 16px; height: 16px; }}}
+
+.sectionDivider {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid $border-color;
+    
+    h2 {
+        font-family: $font-serif;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.controlBar {
+    display: flex; gap: 1rem; margin-bottom: 1.5rem;
+    background-color: $card-bg; padding: 1rem; border-radius: 8px; border: 1px solid $border-color;
+    @media (max-width: 768px) { flex-direction: column; }
+
+    .searchBox {
+        flex: 1; position: relative;
+        input { width: 100%; padding: 0.8rem 1rem 0.8rem 2.5rem; background-color: $input-bg; border: 1px solid $border-color; border-radius: 4px; color: $text-light; outline: none; &:focus { border-color: $text-light; } }
+        .searchIcon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: $text-dim; }
+    }
+    .filterSelect { padding: 0 1rem; background-color: $input-bg; border: 1px solid $border-color; color: $text-light; border-radius: 4px; outline: none; cursor: pointer; min-width: 150px; }
+}
+
+.tableWrapper {
+    background-color: $card-bg; border: 1px solid $border-color; border-radius: 8px; overflow-x: auto;
+    
+    table {
+        width: 100%; border-collapse: collapse; min-width: 800px;
+        th, td { padding: 1.2rem; text-align: left; border-bottom: 1px solid $border-color; }
+        th { font-weight: 600; color: $text-dim; font-size: 0.9rem; text-transform: uppercase; }
+        tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background-color: lighten($card-bg, 3%); }
+
+        .colProduct {
+            display: flex; align-items: center; gap: 1rem;
+            img { width: 48px; height: 48px; border-radius: 4px; object-fit: cover; background-color: #333; }
+            .productInfo { display: flex; flex-direction: column; .productName { font-weight: 500; color: $text-light; } .productID { font-size: 0.8rem; color: $text-dim; } }
+        }
+
+        .statusBadge {
+            padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; text-transform: capitalize;
+            &.active { background: rgba($success-color, 0.15); color: $success-color; border: 1px solid rgba($success-color, 0.3); }
+            &.outstock { background: rgba($danger-color, 0.15); color: $danger-color; border: 1px solid rgba($danger-color, 0.3); }
+        }
+
+        .actions button {
+            background: transparent; border: none; color: $text-dim; cursor: pointer; font-size: 1.1rem; margin-right: 10px; transition: 0.2s;
+            &:hover { color: $text-light; }
+            &.btnDelete:hover { color: $danger-color; }
+        }
+    }
+}

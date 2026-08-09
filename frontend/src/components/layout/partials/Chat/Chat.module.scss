@@ -1,0 +1,88 @@
+.chat_content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.chat_txt{
+    max-width: 60%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.chat_txt.cus{
+    align-self: flex-end;
+    background-color: var(--primary-btn);
+    color: var(--primary);
+}
+
+.chat_txt.emp{
+    align-self: flex-start;
+    background-color: #f1f5f9;
+    color: var(--primary-btn);
+}
+.chat_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    .btn_back{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        &:hover{
+            cursor: pointer;
+        }
+        .icon{
+        color: var(--text);
+        font-size: 1.4rem;
+            
+        }
+        span{
+            color: var(--text);
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    }
+    
+    .chat_title{
+        h4, p{
+            font-size: 1.4rem;
+            color: var(--text);
+        }
+        h4{
+            text-align: center;
+            font-family: "IM FELL DW Pica";
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 3px;
+            font-size: 1.8rem;
+        }
+    }
+
+    .btn_call{
+        .icon{
+            font-size: 1.6rem;
+            color: var(--text);
+        }
+    }
+}
+.chat_send_wrap{
+    display: flex;
+    gap: 12px;
+    margin-top: 60px;
+}
+.chat_form{
+    flex: 1;
+    padding: 14px;
+    font-size: 1.5rem;
+    background-color: #474747;
+    border-radius: 6px;
+    color: var(--text);
+
+    &::placeholder{
+        color: var(--text);
+    }
+}

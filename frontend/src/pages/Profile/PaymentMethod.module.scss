@@ -1,0 +1,166 @@
+$bg-color: #f8fafc;
+$card-bg: #1f1f1f;
+$text-color: #111827;
+$text-muted: #64748b;
+$accent-font: "Times New Roman", serif;
+$base-font: 'Helvetica Neue', sans-serif;
+$btn-bg-light: #e0e0e0;
+
+.paymentPage {
+  background-color: $bg-color;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: $text-color;
+  font-family: $base-font;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  margin-bottom: 40px;
+  .backBtn {
+    display: inline-block;
+    text-decoration: none;
+    color: $text-color;
+    font-size: 1.6rem;
+    font-family: $accent-font;
+    transition: scale 0.3s ease-in-out;
+    
+    &:hover { scale: 1.05; }
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .title {
+    font-family: $accent-font;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .editBtn {
+    background: none;
+    border: none;
+    color: $text-muted;
+    font-size: 1.6rem;
+    cursor: pointer;
+    &:hover { color: $text-color; }
+  }
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.paymentCard {
+  background-color: $card-bg;
+  border-radius: 8px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, background-color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($card-bg, 3%);
+    transform: translateY(-2px);
+  }
+
+  .cardLeft {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .cardLogo {
+      width: 50px;
+      height: 35px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      img {
+        width: 80%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .cardInfo {
+      display: flex;
+      flex-direction: column;
+      
+      .cardName {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin: 0 0 2px 0;
+        color: $text-color;
+      }
+
+      .status {
+        font-size: 1.2rem;
+        color: $text-muted;
+        margin-bottom: 5px;
+      }
+
+      .cardNumber {
+        font-size: 1.2rem;
+        color: $text-color;
+        margin: 0;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .cardRight {
+    .arrow {
+      color: $text-color;
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px;
+    .cardLeft {
+      gap: 15px;
+      .cardLogo { width: 40px; height: 28px; }
+    }
+  }
+}
+
+.actionArea {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  .newCardBtn {
+    background-color: $btn-bg-light;
+    color: #111827; 
+    border: none;
+    border-radius: 4px;
+    padding: 12px 40px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

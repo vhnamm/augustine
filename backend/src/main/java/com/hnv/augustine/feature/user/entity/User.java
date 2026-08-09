@@ -38,6 +38,8 @@ public class User implements UserDetails {
 
     private String avatar;
 
+    private String googleId;
+
     @OneToOne
     @JoinColumn(name = "role_id")
     private Role role;

@@ -5,7 +5,7 @@ import com.hnv.augustine.feature.user.entity.User;
 import org.springframework.security.core.Authentication;
 
 public interface RefreshTokenService {
-    String create(Authentication authentication, String clientIp, String userAgent);
+    String create(User user, String clientIp, String userAgent);
 
     void revoke(String rawToken);
 

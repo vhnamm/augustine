@@ -25,7 +25,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -40,7 +39,6 @@ import java.time.Instant;
 @RequiredArgsConstructor
 @Slf4j
 public class AuthenticationServiceImpl implements AuthenticationService {
-    private final AuthenticationManager authenticationManager;
     private final UserMapper userMapper;
     private final JwtProvider jwtProvider;
     private final UserRepository userRepository;
@@ -58,15 +56,26 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Transactional
     public LoginResponse login(LoginRequest loginRequest, String clientIp, String userAgent) {
         log.info("Login Request: {}", loginRequest);
-        //authenticationManager kết hợp 2 thằng UserDetaileService và PasswordEncoder
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword())
-        );
+        User user = userRepository.findByEmail(loginRequest.getEmail())
+                .orElseThrow((
+                ) -> new AppException(ErrorCode.INVALID_CREDENTIALS));
 
+        if (!user.isAccountNonLocked()) {
+            throw new AppException(ErrorCode.ACCOUNT_LOCKED);
+        }
+
+        if (user.getPassword() == null || !passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {
+            throw new AppException(ErrorCode.INVALID_CREDENTIALS);
+        }
+
+        Authentication authentication = UsernamePasswordAuthenticationToken.authenticated(
+                user, null, user.getAuthorities()
+        );
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        String accessToken = jwtProvider.generateJwtToken(authentication);
-        String refreshToken = refreshTokenService.create(authentication, clientIp, userAgent);
+        String accessToken = jwtProvider.generateJwtToken(user);
+
+        String refreshToken = refreshTokenService.create(user, clientIp, userAgent);
 
         return LoginResponse.builder()
                 .accessToken(accessToken)
@@ -77,7 +86,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     @Transactional
     public void register(RegisterRequest registerRequest){
-        //đẩy nghiệp vụ check exist cho DB(unique constraint tránh concurency)
+
         log.info("Register Request: {}", registerRequest);
         if(userRepository.existsByEmail(registerRequest.getEmail())){ //ko write nen ko bi concurency
             throw new AppException(ErrorCode.USER_ALREADY_EXISTS);
@@ -98,6 +107,32 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         );
 
         otpService.generateAndSendOTP(registerRequest.getEmail(), "Xác thực đăng ký tài khoản Augustine");
+    }
+
+    @Transactional
+    public User processGoogleLogin(String email, String fullName, String imgUrl, String googleId){
+        //check xem da tao tk nao bang email nay ma chua lien ket google ko
+        var opt = userRepository.findByEmail(email);
+        if(opt.isPresent()){
+            //neu chua co google id
+            User user = opt.get();
+            if(user.getGoogleId() == null){
+                user.setGoogleId(googleId);
+                return userRepository.save(user);
+            }
+            return  user;
+        }
+
+        Role r = roleRepository.findByName("USER").orElseThrow(() -> new AppException(ErrorCode.USER_ALREADY_EXISTS));
+        User user = User.builder()
+                .googleId(googleId)
+                .fullName(fullName)
+                .avatar(imgUrl)
+                .email(email)
+                .role(r)
+                .build();
+
+        return userRepository.save(user);
     }
 
     @Transactional
@@ -165,9 +200,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         RefreshToken rt = refreshTokenService.verifyAndGet(refreshToken);
         User user = rt.getUser();
 
-        Authentication authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
-
-        String newAccessToken = jwtProvider.generateJwtToken(authentication);
+        String newAccessToken = jwtProvider.generateJwtToken(user);
 
         return LoginResponse.builder()
                 .accessToken(newAccessToken)

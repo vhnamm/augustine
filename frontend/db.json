@@ -1,0 +1,1977 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Him",
+      "slug": "for-him",
+      "type": "main",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Her",
+      "slug": "for-her",
+      "type": "main",
+      "order": 2
+    }
+  ],
+  "subcategories": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Shirts",
+      "slug": "ao-nam",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Trousers",
+      "slug": "quan-nam",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "Accessories",
+      "slug": "phu-kien-nam",
+      "order": 3
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "name": "Underwears",
+      "slug": "do-lot-nam",
+      "order": 4
+    },
+    
+    {
+      "id": 6,
+      "categoryId": 2,
+      "name": "Shirts",
+      "slug": "ao-nu",
+      "order": 1
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "name": "Trousers",
+      "slug": "quan-nu",
+      "order": 2
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "name": "Dresses",
+      "slug": "vay-nu",
+      "order": 3
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "name": "Underwears",
+      "slug": "do-lot-nu",
+      "order": 4
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "name": "Accessories",
+      "slug": "phu-kien-nu",
+      "order": 5
+    }
+  ],
+  "productTypes": [
+    {
+      "id": 1,
+      "subcategoryId": 1,
+      "name": "T-shirt",
+      "slug": "ao-thun-nam"
+    },
+    {
+      "id": 2,
+      "subcategoryId": 1,
+      "name": "Polo shirt",
+      "slug": "ao-polo-nam"
+    },
+    {
+      "id": 3,
+      "subcategoryId": 1,
+      "name": "Sweatshirt",
+      "slug": "ao-ni-nam"
+    },
+    {
+      "id": 4,
+      "subcategoryId": 1,
+      "name": "Shirt",
+      "slug": "ao-so-mi-nam"
+    },
+    {
+      "id": 5,
+      "subcategoryId": 1,
+      "name": "Jacket",
+      "slug": "ao-khoac-nam"
+    },
+    {
+      "id": 6,
+      "subcategoryId": 1,
+      "name": "Hoodie",
+      "slug": "hoodie-nam"
+    },
+
+    {
+      "id": 7,
+      "subcategoryId": 2,
+      "name": "Short",
+      "slug": "quan-short-nam"
+    },
+    {
+      "id": 9,
+      "subcategoryId": 2,
+      "name": "Jeans",
+      "slug": "jeans-nam"
+    },
+    {
+      "id": 10,
+      "subcategoryId": 2,
+      "name": "Casual pants",
+      "slug": "quan-au-nam"
+    },
+    {
+      "id": 11,
+      "subcategoryId": 2,
+      "name": "Khaki pants",
+      "slug": "quan-kaki-nam"
+    },
+    {
+      "id": 12,
+      "subcategoryId": 8,
+      "name": "skirt",
+      "slug": "chan-vay"
+    },
+    {
+      "id": 13,
+      "subcategoryId": 7,
+      "name": "Casual",
+      "slug": "quan-au-nu"
+    },
+    {
+      "id": 14,
+      "subcategoryId": 7,
+      "name": "Khaki",
+      "slug": "quan-kaki-nu"
+    }
+    ,
+    {
+      "id": 15,
+      "subcategoryId": 6,
+      "name": "Polo",
+      "slug": "polo-nu"
+    },
+    {
+      "id": 16,
+      "subcategoryId": 6,
+      "name": "Jacket",
+      "slug": "khoac-nu"
+    },
+    {
+      "id": 17,
+      "subcategoryId": 6,
+      "name": "T-shirt",
+      "slug": "shirt-nu"
+    },
+    {
+      "id": 18,
+      "subcategoryId": 6,
+      "name": "Shirt",
+      "slug": "somi-nu"
+    }
+  ],
+
+  "products": [
+  {
+      "id": 1,
+      "name": "Áo thun nam cotton premium",
+      "slug": "ao-thun-nam-cotton-premium",
+      "categoryId": 1,
+      "subcategoryId": 1,
+      "productTypeId": 1,
+      "description": "Áo thun nam chất liệu cotton 100% cao cấp, thoáng mát, thấm hút mồ hôi tốt. Form dáng regular fit thoải mái.",
+      "shortDescription": "Áo thun cotton premium, form regular fit",
+      "images": [
+        "/assets/Him/AoThun/AoThunSSS/ao_thun_sss.webp"
+      ],
+      "price": 299000,
+      "status": "in-stock",
+      "tags": ["best-seller", "new-arrival"],
+      "rating": 4.5,
+      "reviewCount": 128,
+      "soldCount": 456,
+      "variants": [
+        {
+          "id": 1,
+          "color": "Nâu",
+          "colorHex": "#403635",
+          "images": [
+            "/assets/Him/AoThun/AoThunSSS/ao_thun_sss.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssNau2.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssNau3.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssNau4.webp"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 15, "sku": "SSS-BRW-S" },
+            { "size": "M", "stock": 20, "sku": "SSS-BRW-M" },
+            { "size": "L", "stock": 25, "sku": "SSS-BRW-L" },
+            { "size": "XL", "stock": 10, "sku": "SSS-BRW-XL" },
+            { "size": "XL", "stock": 10, "sku": "SSS-BRW-XXL" }
+          ]
+        },
+        {
+          "id": 2,
+          "color": "Đen",
+          "colorHex": "#000000",
+          "images": [
+            "/assets/Him/AoThun/AoThunSSS/sssDen1.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssDen2.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssDen3.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssDen4.webp"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 15, "sku": "SSS-BLK-S" },
+            { "size": "M", "stock": 20, "sku": "SSS-BLK-M" },
+            { "size": "L", "stock": 25, "sku": "SSS-BLK-L" },
+            { "size": "XL", "stock": 10, "sku": "SSS-BLK-XL" }
+          ]
+        },
+        {
+          "id": 3,
+          "color": "Trắng",
+          "colorHex": "#FFFFFF",
+          "images": [
+            "/assets/Him/AoThun/AoThunSSS/sssTrang1.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssTrang2.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssTrang3.webp",
+            "/assets/Him/AoThun/AoThunSSS/sssTrang4.webp"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 15, "sku": "SSS-WHT-S" },
+            { "size": "M", "stock": 20, "sku": "SSS-WHT-M" },
+            { "size": "L", "stock": 25, "sku": "SSS-WHT-L" },
+            { "size": "XL", "stock": 10, "sku": "SSS-WHT-XL" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "name": "Áo thun Boxy Mickey",
+      "slug": "ao-thun-boxy-mickey",
+      "categoryId": 1,
+      "subcategoryId": 1,
+      "productTypeId": 1,
+      "description": "Áo thun nam với thiết kế phối viền tinh tế, chất liệu pique cotton mềm mại, form slim fit trẻ trung.",
+      "shortDescription": "Áo thun phối viền, form slim fit",
+      "images": [
+        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
+        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black2.png",
+        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black3.png",
+        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black4.png"
+      ],
+      "status": "in-stock",
+      "rating": 4.3,
+      "reviewCount": 67,
+      "soldCount": 234,
+      "viewCount": 1456,
+      "price": 399000,
+      "variants": [
+        {
+          "id": 1,
+          "color": "Black",
+          "colorHex": "#000000",
+          "images": [
+            "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
+            "/assets/Him/AoThun/BoxyMickey/mickey_phong_black2.png",
+            "/assets/Him/AoThun/BoxyMickey/mickey_phong_black3.png",
+            "/assets/Him/AoThun/BoxyMickey/mickey_phong_black4.png"
+          ],
+          "sizes": [
+            { "size": "M", "stock": 12, "sku": "APN001-BLK-M" },
+            { "size": "L", "stock": 8, "sku": "APN001-BLK-L" },
+            { "size": "XL", "stock": 5, "sku": "APN001-BLK-XL" }
+          ]
+        },
+        {
+          "id": 2,
+          "color": "Gray",
+          "colorHex": "#808080",
+          "images": [
+            "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray1.png",
+            "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray2.png",
+            "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray3.png",
+            "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray4.png"
+          ],
+          "sizes": [
+            { "size": "M", "stock": 12, "sku": "APN001-GRY-M" },
+            { "size": "L", "stock": 8, "sku": "APN001-GRY-L" },
+            { "size": "XL", "stock": 5, "sku": "APN001-GRY-XL" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "name": "Áo thun Dior Mountain",
+      "slug": "ao-thun-dior-mountain",
+      "categoryId": 2,
+      "subcategoryId": 6,
+      "productTypeId": 15,
+      "description": "Áo thun nam với thiết kế phối viền tinh tế, chất liệu pique cotton mềm mại, form slim fit trẻ trung.",
+      "shortDescription": "Áo thun phối viền, form slim fit",
+      "images": [
+        "/assets/Him/AoThun/DiorMountain/diormountain.png"
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.3,
+      "reviewCount": 89,
+      "soldCount": 1002,
+      "viewCount": 2890,
+      "price": 499000,
+      "variants": [
+        {
+          "id": 1,
+          "color": "White",
+          "colorHex": "#FFFFFF",
+          "images": [
+            "/assets/Him/AoThun/DiorMountain/diormountain.png",
+            "/assets/Him/AoThun/DiorMountain/diormountain.png",
+            "/assets/Him/AoThun/DiorMountain/diormountain.png",
+            "/assets/Him/AoThun/DiorMountain/diormountain.png",
+            "/assets/Him/AoThun/DiorMountain/diormountain.png"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 7, "sku": "DMT001-WHT-S" },
+            { "size": "M", "stock": 10, "sku": "DMT001-WHT-M" },
+            { "size": "L", "stock": 5, "sku": "DMT001-WHT-L" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "name": "Áo thun in hình .Boxy",
+      "slug": "ao-thun-boxy",
+      "categoryId": 1,
+      "subcategoryId": 1,
+      "productTypeId": 1,
+      "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
+      "shortDescription": "Áo thun nam in hình Boxy",
+      "images": [
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "soldCount": 178,
+      "viewCount": 2890,
+      "price": 599000,
+      "variants": [
+        {
+          "id": 1,
+          "color": "Black",
+          "colorHex": "#000000",
+          "images": [
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png",
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+            { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+            { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" },
+            { "size": "XL", "stock": 5, "sku": "TBX002-BLK-XL" },
+            { "size": "XXL", "stock": 5, "sku": "TBX002-BLK-XXL" }
+          ]
+        },
+        {
+          "id": 2,
+          "color": "Cream",
+          "colorHex": "#FFFDD0",
+          "images": [
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png",
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
+            "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+            { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+            { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" },
+            { "size": "XL", "stock": 5, "sku": "TBX002-CRE-XL" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "name": "Áo phao chần bông nam",
+      "slug": "ao-phao-chan-bong-nam",
+      "categoryId": 1,
+      "subcategoryId": 1,
+      "productTypeId": 5,
+      "description": "Áo phao chần bông siêu nhẹ.",
+      "shortDescription": "Áo phao chần bông siêu nhẹ, mặc là mê, chê là giận.",
+      "images": [
+        "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black.png"
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "soldCount": 178,
+      "viewCount": 2890,
+      "price": 599000,
+      "variants": [
+        {
+          "id": 1,
+          "color": "Black",
+          "colorHex": "#000000",
+          "images": [
+            "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black.png",
+            "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black2.png",
+            "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black3.png",
+            "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black4.png"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 7, "sku": "PCB-BLK-S" },
+            { "size": "M", "stock": 10, "sku": "PCB-BLK-M" },
+            { "size": "L", "stock": 5, "sku": "PCB-BLK-L" },
+            { "size": "L", "stock": 5, "sku": "PCB-BLK-XL" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "name": "Quần denim nam cropped straight",
+      "slug": "quan-denim-cropped-straight",
+      "categoryId": 1,
+      "subcategoryId": 2,
+      "productTypeId": 9,
+      "description": "Quần denim nam cropped straight",
+      "shortDescription": "Quần denim nam cropped straight",
+      "images": [
+        "/assets/Him/QuanJean/denimstraight_kem.png"
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "soldCount": 178,
+      "viewCount": 2890,
+      "price": 599000,
+      "variants": [
+        {
+          "id": 1,
+          "color": "Cream",
+          "colorHex": "#FFFDD0",
+          "images": [
+            "/assets/Him/QuanJean/denimstraight_kem.png",
+            "/assets/Him/QuanJean/denimstraight_kem2.png",
+            "/assets/Him/QuanJean/denimstraight_kem3.png",
+            "/assets/Him/QuanJean/denimstraight_kem4.png"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+            { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+            { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 7,
+      "name": "Áo polo fitted",
+      "slug": "ao-polo-fitted",
+      "categoryId": 1,
+      "subcategoryId": 1,
+      "productTypeId": 2,
+      "description": "Áo polo fitted",
+      "shortDescription": "Áo polo fitted",
+      "images": [
+        "/assets/Him/Polo/polofitted1.png"
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "soldCount": 178,
+      "viewCount": 2890,
+      "price": 599000,
+      "variants": [
+        {
+          "id": 1,
+          "color": "White",
+          "colorHex": "#FFFFFF",
+          "images": [
+            "/assets/Him/Polo/polofitted1.png",
+            "/assets/Him/Polo/polofitted2.png",
+            "/assets/Him/Polo/polofitted3.png",
+            "/assets/Him/Polo/polofitted4.png"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 7, "sku": "TBX001-WHT-S" },
+            { "size": "M", "stock": 10, "sku": "TBX002-WHT-M" },
+            { "size": "L", "stock": 5, "sku": "TBX002-WHT-M" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 8,
+      "name": "Áo polo sọc xanh",
+      "slug": "ao-polo-soc-xanh",
+      "categoryId": 1,
+      "subcategoryId": 1,
+      "productTypeId": 2,
+      "description": "Áo polo sọc xanh",
+      "shortDescription": "Áo polo sọc xanh",
+      "images": [
+        "/assets/Him/Polo/PoloSoc/polosoc1.png"
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "soldCount": 178,
+      "viewCount": 2890,
+      "price": 599000,
+      "variants": [
+        {
+          "id": 1,
+          "color": "Black",
+          "colorHex": "#000",
+          "images": [
+            "/assets/Him/Polo/PoloSoc/polosoc1.png",
+            "/assets/Him/Polo/PoloSoc/polosoc2.png",
+            "/assets/Him/Polo/PoloSoc/polosoc3.png",
+            "/assets/Him/Polo/PoloSoc/polosoc4.png"
+          ],
+          "sizes": [
+            { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+            { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+            { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+          ]
+        }
+      ]
+    },
+
+   {
+  "id": 9,
+  "name": "Áo sơ mi kẻ sọc",
+  "slug": "ao-so-mi-ke-soc",
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "productTypeId": 4,
+  "description": "Áo sơ mi kẻ sọc",
+  "shortDescription": "Áo sơ mi kẻ sọc",
+  "images": [
+    "/assets/Him/SoMi/KeSoc/kexanh1.png"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 599000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Blue",
+      "colorHex": "#000",
+      "images": [
+        "/assets/Him/SoMi/KeSoc/kexanh1.png",
+        "/assets/Him/SoMi/KeSoc/kexanh2.png",
+        "/assets/Him/SoMi/KeSoc/kexanh3.png",
+        "/assets/Him/SoMi/KeSoc/kexanh4.png"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+        { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+        { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+      ]
+    }
+  ]
+}
+,
+
+    {
+    "id": 10,
+    "name": "Áo sơ mi polyeste",
+    "slug": "ao-so-mi-polyeste",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 4,
+    "description": "Áo sơ mi polyeste",
+    "shortDescription": "Áo sơ mi polyeste",
+    "images": [
+      "/assets/Him/SoMi/polyeste/somipoly.png"
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      {
+        "id": 1,
+        "color": "White",
+        "colorHex": "#FFFFFF",
+        "images": [
+          "/assets/Him/SoMi/polyeste/somipoly.png",
+          "/assets/Him/SoMi/polyeste/somipoly2.png",
+          "/assets/Him/SoMi/polyeste/somipoly3.png",
+          "/assets/Him/SoMi/polyeste/somipoly4.png"
+        ],
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      }
+    ]
+  }
+  ,
+
+    {
+  "id": 11,
+  "name": "Áo sweater nam form loose",
+  "slug": "ao-sweater-loose",
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "productTypeId": 3,
+  "description": "Áo sweater nam form loose",
+  "shortDescription": "Áo sweater nam form loose",
+  "images": [
+    "/assets/Him/Sweater/loose_blk1.png"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 599000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Black",
+      "colorHex": "#000",
+      "images": [
+        "/assets/Him/Sweater/loose_blk1.png",
+        "/assets/Him/Sweater/loose_blk2.png",
+        "/assets/Him/Sweater/loose_blk3.png",
+        "/assets/Him/Sweater/loose_blk4.png"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+        { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+        { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+      ]
+    }
+  ]
+}
+,
+
+    {
+  "id": 12,
+  "name": "Áo hoodie in hình .Boxy",
+  "slug": "ao-hoodie-boxy",
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "productTypeId": 6,
+  "description": "Áo hoodie in hình .Boxy",
+  "shortDescription": "Áo hoodie in hình .Boxy",
+  "images": [
+    "/assets/Him/Hoodie/Boxy/hoodieboxy.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 599000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Black",
+      "colorHex": "#000",
+      "images": [
+        "/assets/Him/Hoodie/Boxy/hoodieboxy.webp",
+        "/assets/Him/Hoodie/Boxy/hoodieboxy2.webp",
+        "/assets/Him/Hoodie/Boxy/hoodieboxy3.webp",
+        "/assets/Him/Hoodie/Boxy/hoodieboxy4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+        { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+        { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+      ]
+    },
+    {
+      "id": 2,
+      "color": "Cream",
+      "colorHex": "#FFFDD0",
+      "images": [
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+        { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+        { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
+      ]
+    }
+  ]
+}
+,
+
+    {
+  "id": 13,
+  "name": "Áo khoác regular corduroy",
+  "slug": "ao-khoac-corduroy",
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "productTypeId": 5,
+  "description": "Áo khoác regular corduroy",
+  "shortDescription": "Áo khoác regular corduroy",
+  "images": [
+    "/assets/Him/AoPhao/Coduroy/coduroi.png"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 599000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Cream",
+      "colorHex": "#FFFDD0",
+      "images": [
+        "/assets/Him/AoPhao/Coduroy/coduroi.png",
+        "/assets/Him/AoPhao/Coduroy/coduroi2.png",
+        "/assets/Him/AoPhao/Coduroy/coduroi3.png",
+        "/assets/Him/AoPhao/Coduroy/coduroi4.png"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+        { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+        { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
+      ]
+    }
+  ]
+}
+,
+
+    {
+    "id": 14,
+    "name": "Áo thun in hình .Boxy",
+    "slug": "ao-thun-boxy",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 1,
+    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
+    "shortDescription": "Áo thun nam in hình Boxy",
+    "images": [
+      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      {
+        "id": 1,
+        "color": "Black",
+        "colorHex": "#000",
+        "images": [
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png",
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+        ],
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      },
+      {
+        "id": 2,
+        "color": "Cream",
+        "colorHex": "#FFFDD0",
+        "images": [
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png",
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
+          "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+        ],
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
+        ]
+      }
+    ]
+  },
+
+  {
+  "id": 15,
+  "name": "Quần lót form boxer",
+  "slug": "lot-boxer",
+  "categoryId": 1,
+  "subcategoryId": 4,
+  "productTypeId": null,
+  "description": "Form dáng Boxer nam tính, ôm sát vừa vặn giúp tôn dáng và mang lại cảm giác tự tin, thoải mái trong mọi vận động hằng ngày.",
+  "shortDescription": "Trải nghiệm sự thông thoáng tuyệt đối với chất vải thun lạnh (hoặc Cotton) co giãn 4 chiều",
+  "images": [
+    "/assets/Him/DoLot/boxer1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 117000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Grey",
+      "colorHex": "#808080",
+      "images": [
+        "/assets/Him/DoLot/boxer1.webp",
+        "/assets/Him/DoLot/boxer2.webp",
+       "/assets/Him/DoLot/boxer3.webp"
+
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "LOT-GRY-S" },
+        { "size": "M", "stock": 10, "sku": "LOT-GRY-M" },
+        { "size": "L", "stock": 5, "sku": "LOT-GRY-L" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 16,
+  "name": "Quần lót tam giác nam",
+  "slug": "lot-tam-giac",
+  "categoryId": 1,
+  "subcategoryId": 4,
+  "productTypeId": null,
+  "description": "Form dáng Boxer nam tính, ôm sát vừa vặn giúp tôn dáng và mang lại cảm giác tự tin, thoải mái trong mọi vận động hằng ngày.",
+  "shortDescription": "Trải nghiệm sự thông thoáng tuyệt đối với chất vải thun lạnh (hoặc Cotton) co giãn 4 chiều",
+  "images": [
+    "/assets/Him/DoLot/tamgiac1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 117000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Grey",
+      "colorHex": "#808080",
+      "images": [
+        "/assets/Him/DoLot/tamgiac1.webp",
+        "/assets/Him/DoLot/tamgiac2.webp",
+       "/assets/Him/DoLot/tamgiac3.webp",
+       "/assets/Him/DoLot/tamgiac4.webp"
+
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "LOT-GRY-S" },
+        { "size": "M", "stock": 10, "sku": "LOT-GRY-M" },
+        { "size": "L", "stock": 5, "sku": "LOT-GRY-L" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 17,
+  "name": "Tất cotton ngắn cổ Augustine",
+  "slug": "tat-augustine",
+  "categoryId": 1,
+  "subcategoryId": 4,
+  "productTypeId": null,
+  "description": "Dáng ngắn cổ thời trang, ôm sát vừa vặn. Công nghệ dệt kim mật độ cao giúp tất không bị dão, bền bỉ sau nhiều lần giặt",
+  "shortDescription": "Được dệt từ sợi Cotton tự nhiên cao cấp, mang lại bề mặt mềm mại, thấm hút mồ hôi cực tốt",
+  "images": [
+    "/assets/Him/DoLot/tat1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 58000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Xanh reu",
+      "colorHex": "#585b4c",
+      "images": [
+        "/assets/Him/DoLot/tat1.webp",
+        "/assets/Him/DoLot/tat2.webp",
+       "/assets/Him/DoLot/tat3.webp",
+       "/assets/Him/DoLot/tat4.webp"
+
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "LOT-GRY-S" },
+        { "size": "M", "stock": 10, "sku": "LOT-GRY-M" },
+        { "size": "L", "stock": 5, "sku": "LOT-GRY-L" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 18,
+  "name": "Tất cao cổ sọc đỏ Augustine",
+  "slug": "tat-soc-augustine",
+  "categoryId": 1,
+  "subcategoryId": 4,
+  "productTypeId": null,
+  "description": "Dáng ngắn cổ thời trang, ôm sát vừa vặn. Công nghệ dệt kim mật độ cao giúp tất không bị dão, bền bỉ sau nhiều lần giặt",
+  "shortDescription": "Được dệt từ sợi Cotton tự nhiên cao cấp, mang lại bề mặt mềm mại, thấm hút mồ hôi cực tốt",
+  "images": [
+    "/assets/Him/DoLot/tatdo1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 58000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Red",
+      "colorHex": "#b53238",
+      "images": [
+        "/assets/Him/DoLot/tatdo1.webp",
+        "/assets/Him/DoLot/tatdo2.webp",
+       "/assets/Him/DoLot/tatdo3.webp",
+       "/assets/Him/DoLot/tatdo4.webp"
+
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "LOT-GRY-S" },
+        { "size": "M", "stock": 10, "sku": "LOT-GRY-M" },
+        { "size": "L", "stock": 5, "sku": "LOT-GRY-L" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 19,
+  "name": "Quần khaki regular Augustine",
+  "slug": "khaki-regular",
+  "categoryId": 1,
+  "subcategoryId": 2,
+  "productTypeId": 11,
+  "description": "Sợi vải dày dặn nhưng vẫn giữ được độ mềm mại, có khả năng chống nhăn hiệu quả, giúp bạn luôn tự tin giữ được form dáng chỉn chu suốt ngày dài làm việc.",
+  "shortDescription": "Form dáng Regular Fit: Thiết kế ống đứng truyền thống, không quá bó sát, tạo sự thoải mái",
+  "images": [
+    "/assets/Him/Khaki/regularden1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 58000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Black",
+      "colorHex": "#000",
+      "images": [
+        "/assets/Him/Khaki/regularden1.webp",
+        "/assets/Him/Khaki/regularden2.webp",
+       "/assets/Him/Khaki/regularden3.webp",
+       "/assets/Him/Khaki/regularden4.webp"
+
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "LOT-GRY-S" },
+        { "size": "M", "stock": 10, "sku": "LOT-GRY-M" },
+        { "size": "L", "stock": 5, "sku": "LOT-GRY-L" }
+      ]
+    },
+
+    {
+      "id": 2,
+      "color": "Cream",
+      "colorHex": "#FFFDD0",
+      "images": [
+        "/assets/Him/Khaki/regularkem1.webp",
+        "/assets/Him/Khaki/regularkem2.webp",
+       "/assets/Him/Khaki/regularkem3.webp",
+       "/assets/Him/Khaki/regularkem4.webp"
+
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "LOT-GRY-S" },
+        { "size": "M", "stock": 10, "sku": "LOT-GRY-M" },
+        { "size": "L", "stock": 5, "sku": "LOT-GRY-L" }
+      ]
+    }
+  ]
+},
+{
+  "id": 20,
+  "name": "Quần âu dáng suông Augustine",
+  "slug": "au-dang-suong-augustine",
+  "categoryId": 1,
+  "subcategoryId": 2,
+  "productTypeId": 10,
+  "description": "Dáng ngắn cổ thời trang, ôm sát vừa vặn. Công nghệ dệt kim mật độ cao giúp tất không bị dão, bền bỉ sau nhiều lần giặt",
+  "shortDescription": "Được dệt từ sợi Cotton tự nhiên cao cấp, mang lại bề mặt mềm mại, thấm hút mồ hôi cực tốt",
+  "images": [
+    "/assets/Him/QuanAu/AuDangSuong/audangsuong_kem1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 58000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Cream",
+      "colorHex": "#585b4c",
+      "images": [
+        "/assets/Him/QuanAu/AuDangSuong/audangsuong_kem1.webp",
+        "/assets/Him/QuanAu/AuDangSuong/audangsuong_kem2.webp",
+       "/assets/Him/QuanAu/AuDangSuong/audangsuong_kem3.webp",
+       "/assets/Him/QuanAu/AuDangSuong/audangsuong_kem4.webp"
+
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "LOT-GRY-S" },
+        { "size": "M", "stock": 10, "sku": "LOT-GRY-M" },
+        { "size": "L", "stock": 5, "sku": "LOT-GRY-L" }
+      ]
+    }
+  ]
+},
+  {
+  "id": 21,
+  "name": "Quần short Augustine",
+  "slug": "short-augustine",
+  "categoryId": 1,
+  "subcategoryId": 2,
+  "productTypeId": 7,
+  "description": "Dáng ngắn cổ thời trang, ôm sát vừa vặn. Công nghệ dệt kim mật độ cao giúp tất không bị dão, bền bỉ sau nhiều lần giặt",
+  "shortDescription": "Được dệt từ sợi Cotton tự nhiên cao cấp, mang lại bề mặt mềm mại, thấm hút mồ hôi cực tốt",
+  "images": [
+    "/assets/Him/QuanShort/cargokem1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "best-seller"],
+  "rating": 4.7,
+  "reviewCount": 89,
+  "soldCount": 178,
+  "viewCount": 2890,
+  "price": 58000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Cream",
+      "colorHex": "#FFFDD0",
+      "images": [
+        "/assets/Him/QuanShort/cargokem1.webp",
+        "/assets/Him/QuanShort/cargokem2.webp",
+       "/assets/Him/QuanShort/cargokem3.webp",
+       "/assets/Him/QuanShort/cargokem4.webp"
+
+      ],
+      "sizes": [
+        { "size": "S", "stock": 7, "sku": "LOT-GRY-S" },
+        { "size": "M", "stock": 10, "sku": "LOT-GRY-M" },
+        { "size": "L", "stock": 5, "sku": "LOT-GRY-L" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 22,
+  "name": "Túi trống Duffle Bag Augustine",
+  "slug": "duffle-bag-augustine",
+  "categoryId": 1,
+  "subcategoryId": 3,
+  "productTypeId": null,
+  "description": "Thiết kế túi trống hiện đại, không gian chứa đồ rộng rãi phù hợp cho những chuyến du lịch ngắn ngày hoặc đi tập gym. Chất liệu vải cao cấp chống thấm nước nhẹ và dây đeo chắc chắn.",
+  "shortDescription": "Túi du lịch đa năng, chất liệu bền bỉ và kiểu dáng thời thượng",
+  "images": [
+    "/assets/Him/PhuKien/dufflebagkem1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "essential"],
+  "rating": 4.9,
+  "reviewCount": 42,
+  "soldCount": 125,
+  "viewCount": 1560,
+  "price": 450000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Cream",
+      "colorHex": "#F5F5DC",
+      "images": [
+        "/assets/Him/PhuKien/dufflebagkem1.webp",
+        "/assets/Him/PhuKien/dufflebagkem2.webp",
+        "/assets/Him/PhuKien/dufflebagkem3.webp",
+        "/assets/Him/PhuKien/dufflebagkem4.webp"
+      ],
+      "sizes": [
+        { "size": "One Size", "stock": 25, "sku": "BAG-CRM-OS" }
+      ]
+    }
+  ]
+},
+{
+  "id": 23,
+  "name": "Nón Khaki Augustine Premium",
+  "slug": "non-khaki-premium",
+  "categoryId": 1,
+  "subcategoryId": 3,
+  "productTypeId": null,
+  "description": "Thiết kế nón lưỡi trai cổ điển với chất liệu Khaki dày dặn, đứng form. Khóa chỉnh size kim loại cao cấp phía sau giúp điều chỉnh độ rộng linh hoạt, phù hợp với mọi kích thước vòng đầu.",
+  "shortDescription": "Chất liệu Khaki bền bỉ, form dáng cứng cáp và phong cách năng động",
+  "images": [
+    "/assets/Him/PhuKien/nonkhakikem1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "essential"],
+  "rating": 4.8,
+  "reviewCount": 56,
+  "soldCount": 210,
+  "viewCount": 3420,
+  "price": 185000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Beige",
+      "colorHex": "#F5F5DC",
+      "images": [
+        "/assets/Him/PhuKien/nonkhakikem1.webp",
+        "/assets/Him/PhuKien/nonkhakikem2.webp",
+        "/assets/Him/PhuKien/nonkhakikem3.webp",
+        "/assets/Him/PhuKien/nonkhakikem4.webp"
+      ],
+      "sizes": [
+        { "size": "One Size", "stock": 45, "sku": "HAT-KHK-OS" }
+      ]
+    }
+  ]
+},
+{
+  "id": 24,
+  "name": "Nón Khaki Augustine Red Edition",
+  "slug": "non-khaki-red",
+  "categoryId": 1,
+  "subcategoryId": 3,
+  "productTypeId": null,
+  "description": "Phiên bản màu đỏ nổi bật, chất liệu Khaki cotton cao cấp giúp thoáng khí tối đa. Form nón cứng cáp, lưỡi trai được gia cố chắc chắn, phù hợp cho các hoạt động ngoài trời và phối đồ phong cách Streetwear.",
+  "shortDescription": "Sắc đỏ năng động, chất vải Khaki đứng form, khóa kim loại bền bỉ",
+  "images": [
+    "/assets/Him/PhuKien/nonkhakired1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 38,
+  "soldCount": 142,
+  "viewCount": 2150,
+  "price": 185000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Red",
+      "colorHex": "#FF0000",
+      "images": [
+        "/assets/Him/PhuKien/nonkhakired1.webp",
+        "/assets/Him/PhuKien/nonkhakired2.webp",
+        "/assets/Him/PhuKien/nonkhakired3.webp",
+        "/assets/Him/PhuKien/nonkhakired4.webp"
+      ],
+      "sizes": [
+        { "size": "One Size", "stock": 30, "sku": "HAT-RED-OS" }
+      ]
+    }
+  ]
+},
+{
+  "id": 25,
+  "name": "Nón Thêu Augustine Signature",
+  "slug": "non-theu-signature",
+  "categoryId": 1,
+  "subcategoryId": 3,
+  "productTypeId": null,
+  "description": "Điểm nhấn nổi bật với logo Augustine được thêu nổi 3D tỉ mỉ ở mặt trước. Chất liệu vải kaki dệt dày dặn, đường may sắc sảo, mang lại vẻ ngoài cá tính và cao cấp cho người sử dụng.",
+  "shortDescription": "Họa tiết thêu nổi tinh tế, form dáng chuẩn, khóa gài kim loại điều chỉnh linh hoạt",
+  "images": [
+    "/assets/Him/PhuKien/nontheu1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "exclusive"],
+  "rating": 4.9,
+  "reviewCount": 25,
+  "soldCount": 95,
+  "viewCount": 1800,
+  "price": 215000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Black",
+      "colorHex": "#000000",
+      "images": [
+        "/assets/Him/PhuKien/nontheu1.webp",
+        "/assets/Him/PhuKien/nontheu2.webp",
+        "/assets/Him/PhuKien/nontheu3.webp",
+        "/assets/Him/PhuKien/nontheu4.webp"
+      ],
+      "sizes": [
+        { "size": "One Size", "stock": 50, "sku": "HAT-EMB-OS" }
+      ]
+    }
+  ]
+},
+{
+  "id": 26,
+  "name": "Thắt lưng da Augustine Classic",
+  "slug": "that-lung-da-classic",
+  "categoryId": 1,
+  "subcategoryId": 3,
+  "productTypeId": null,
+  "description": "Thắt lưng được hoàn thiện từ chất liệu da tổng hợp cao cấp với bề mặt mịn màng, bền bỉ. Mặt khóa kim loại chống gỉ sét, thiết kế tối giản nhưng sang trọng, là phụ kiện không thể thiếu để hoàn thiện bộ trang phục lịch lãm.",
+  "shortDescription": "Chất liệu da bền đẹp, khóa kim loại không gỉ, dễ dàng điều chỉnh kích cỡ",
+  "images": [
+    "/assets/Him/PhuKien/thatlung1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["essential", "best-seller"],
+  "rating": 4.8,
+  "reviewCount": 34,
+  "soldCount": 112,
+  "viewCount": 2450,
+  "price": 285000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Black",
+      "colorHex": "#000000",
+      "images": [
+        "/assets/Him/PhuKien/thatlung1.webp",
+        "/assets/Him/PhuKien/thatlung2.webp"
+      ],
+      "sizes": [
+        { "size": "One Size", "stock": 40, "sku": "BELT-BLK-OS" }
+      ]
+    }
+  ]
+},
+{
+  "id": 27,
+  "name": "Ví da Augustine Navy Blue",
+  "slug": "vi-da-navy-blue",
+  "categoryId": 1,
+  "subcategoryId": 3,
+  "productTypeId": null,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Him/PhuKien/vixanhduong1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Navy Blue",
+      "colorHex": "#000080",
+      "images": [
+        "/assets/Him/PhuKien/vixanhduong1.webp",
+        "/assets/Him/PhuKien/vixanhduong2.webp",
+        "/assets/Him/PhuKien/vixanhduong3.webp"
+      ],
+      "sizes": [
+        { "size": "One Size", "stock": 20, "sku": "WAL-NVY-OS" }
+      ]
+    }
+  ]
+},
+{
+  "id": 28,
+  "name": "Áo dệt kim nữ Augustine",
+  "slug": "det-kim-nu",
+  "categoryId": 2,
+  "subcategoryId": 6,
+  "productTypeId": 17,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Ao/detkim1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Ao/detkim1.webp",
+        "/assets/Her/Ao/detkim2.webp",
+        "/assets/Her/Ao/detkim3.webp",
+        "/assets/Her/Ao/detkim1.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+{
+  "id": 29,
+  "name": "Áo khoác regular Augustine",
+  "slug": "khoac-regular-nu",
+  "categoryId": 2,
+  "subcategoryId": 6,
+  "productTypeId": 16,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Ao/khoacregular1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "Black",
+      "colorHex": "#000",
+      "images": [
+        "/assets/Her/Ao/khoacregular1.webp",
+        "/assets/Her/Ao/khoacregular2.webp",
+        "/assets/Her/Ao/khoacregular3.webp",
+        "/assets/Her/Ao/khoacregular4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+{
+  "id": 30,
+  "name": "Áo polo slim Augustine",
+  "slug": "polo-slim-augustine",
+  "categoryId": 2,
+  "subcategoryId": 6,
+  "productTypeId": 15,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Ao/poloslim1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Ao/poloslim1.webp",
+        "/assets/Her/Ao/poloslim2.webp",
+        "/assets/Her/Ao/poloslim3.webp",
+        "/assets/Her/Ao/poloslim4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+{
+  "id": 31,
+  "name": "Áo sơ mi nữ Augustine",
+  "slug": "so-mi-nu-augustine",
+  "categoryId": 2,
+  "subcategoryId": 6,
+  "productTypeId": 18,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Ao/somi1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Ao/somi1.webp",
+        "/assets/Her/Ao/somi2.webp",
+        "/assets/Her/Ao/somi3.webp",
+        "/assets/Her/Ao/somi4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+{
+  "id": 32,
+  "name": "Chân váy augustine signature",
+  "slug": "chan-vay-signature",
+  "categoryId": 2,
+  "subcategoryId": 8,
+  "productTypeId": 12,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Quan/chanvay1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Quan/chanvay1.webp",
+        "/assets/Her/Quan/chanvay2.webp",
+        "/assets/Her/Quan/chanvay3.webp",
+        "/assets/Her/Quan/chanvay4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+{
+  "id": 33,
+  "name": "Chân váy da augustine",
+  "slug": "chan-vay-da",
+  "categoryId": 2,
+  "subcategoryId": 8,
+  "productTypeId": 12,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Quan/da1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Quan/da1.webp",
+        "/assets/Her/Quan/da2.webp",
+        "/assets/Her/Quan/da3.webp",
+        "/assets/Her/Quan/da4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+{
+  "id": 34,
+  "name": "Đầm nữ augustine",
+  "slug": "dam-nu-augustine",
+  "categoryId": 2,
+  "subcategoryId": 8,
+  "productTypeId": 12,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Vay/vay1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Vay/vay1.webp",
+        "/assets/Her/Vay/vay2.webp",
+        "/assets/Her/Vay/vay3.webp",
+        "/assets/Her/Vay/vay4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+{
+  "id": 35,
+  "name": "Quần âu nữ augustine signature",
+  "slug": "au-nu-augustine",
+  "categoryId": 2,
+  "subcategoryId": 7,
+  "productTypeId": 13,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Quan/au1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Quan/au1.webp",
+        "/assets/Her/Quan/au2.webp",
+        "/assets/Her/Quan/au3.webp",
+        "/assets/Her/Quan/au4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 36,
+  "name": "Quần Denim nữ ống suông",
+  "slug": "denim-suong-augustine",
+  "categoryId": 2,
+  "subcategoryId": 7,
+  "productTypeId": 14,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Quan/denim1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Quan/denim1.webp",
+        "/assets/Her/Quan/denim1.webp",
+        "/assets/Her/Quan/denim1.webp",
+        "/assets/Her/Quan/denim1.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 37,
+  "name": "Quần Lót Nữ Seamless Cạp Ép Trong Dáng Brief ",
+  "slug": "lot-brief",
+  "categoryId": 2,
+  "subcategoryId": 9,
+  "productTypeId": null,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Lot/lothong1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/Lot/lothong1.webp",
+        "/assets/Her/Lot/lothong2.webp",
+        "/assets/Her/Lot/lothong3.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 38,
+  "name": "Áo 2 Dây Nữ Cổ Rộng",
+  "slug": "hai-day-nu",
+  "categoryId": 2,
+  "subcategoryId": 9,
+  "productTypeId": null,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/Lot/aolot1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+       "/assets/Her/Lot/aolot1.webp",
+        "/assets/Her/Lot/aolot2.webp",
+        "/assets/Her/Lot/aolot3.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+{
+  "id": 39,
+  "name": "Giày Dép Cao Gót Nữ Mũi Nhọn",
+  "slug": "cao-got-nu",
+  "categoryId": 2,
+  "subcategoryId": 10,
+  "productTypeId": null,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/PhuKien/caogot1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+       "/assets/Her/PhuKien/caogot1.webp",
+        "/assets/Her/PhuKien/caogot2.webp",
+        "/assets/Her/PhuKien/caogot3.webp",
+        "/assets/Her/PhuKien/caogot4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 40,
+  "name": "Giày Dép Sandal Nữ Quai Ngang",
+  "slug": "sandal-nu",
+  "categoryId": 2,
+  "subcategoryId": 10,
+  "productTypeId": null,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/PhuKien/sandal1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+        "/assets/Her/PhuKien/sandal1.webp",
+         "/assets/Her/PhuKien/sandal2.webp",
+         "/assets/Her/PhuKien/sandal3.webp",
+         "/assets/Her/PhuKien/sandal4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+},
+
+{
+  "id": 41,
+  "name": "Túi Xách Nữ Đeo Vai Phối Dây Xích",
+  "slug": "tui-xach-xich-nu",
+  "categoryId": 2,
+  "subcategoryId": 10,
+  "productTypeId": null,
+  "description": "Mẫu ví với sắc xanh dương (Navy) hiện đại, được thiết kế nhiều ngăn tiện lợi cho thẻ và tiền mặt. Chất liệu da cao cấp với đường chỉ may tỉ mỉ, mang lại vẻ ngoài trẻ trung nhưng không kém phần sang trọng.",
+  "shortDescription": "Sắc xanh Navy thời thượng, thiết kế nhỏ gọn, nhiều ngăn tiện dụng",
+  "images": [
+    "/assets/Her/PhuKien/tuixach1.webp"
+  ],
+  "status": "in-stock",
+  "tags": ["new-arrival", "trending"],
+  "rating": 4.9,
+  "reviewCount": 28,
+  "soldCount": 65,
+  "viewCount": 1280,
+  "price": 320000,
+  "variants": [
+    {
+      "id": 1,
+      "color": "White",
+      "colorHex": "#fff",
+      "images": [
+         "/assets/Her/PhuKien/tuixach1.webp",
+          "/assets/Her/PhuKien/tuixach2.webp",
+          "/assets/Her/PhuKien/tuixach3.webp",
+          "/assets/Her/PhuKien/tuixach4.webp"
+      ],
+      "sizes": [
+        { "size": "S", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "M", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "L", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XL", "stock": 20, "sku": "WAL-NVY-S" },
+        { "size": "XXL", "stock": 20, "sku": "WAL-NVY-S" }
+      ]
+    }
+  ]
+}
+
+],
+
+  
+  "collections": [
+    {
+      "id": 1,
+      "name": "Spring 2025",
+      "slug": "spring-2025",
+      "title": "Spring collection 2025",
+      "description": "THE AWAKENING OF COLOR AND LIGHT.",
+      "sub_description": "Fresh fabrics, fluid motion, and the bright, vivid palettes signaling a new start. Step into the season with lightness and intention.",
+      "image": "/assets/Collections/spring/spring.png",
+      "productIds": [30, 36, 39, 41],
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Summer 2025",
+      "slug": "summer-2025",
+      "title": "Summer collection 2025",
+      "description": "CHASING THE SUN: SUMMER '25 UNPACKED",
+      "sub_description": "Vibrant hues, breathable fabrics, and effortless designs built for endless coastal days and vibrant summer nights.",
+      "image": "/assets/Collections/summer/summer.png",
+      "productIds": [1, 7, 21, 24],
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "Autumn 2025",
+      "slug": "autumn-2025",
+      "title": "Fall collection 2025",
+      "description": "THE UNVEILING OF AUTUMN'S DEPTH",
+      "sub_description": "Discover our elevated knits, signature textures, and the essential layering pieces to define your Fall 2025 wardrobe.",
+      "image": "/assets/Collections/autumn/autumn.png",
+      "productIds": [10, 19, 22, 4],
+      "featured": true,
+      "order": 3
+    },
+    {
+      "id": 4,
+      "name": "Winter 2025",
+      "slug": "winter-2025",
+      "title": "Winter collection 2025",
+      "description": "A RETURN TO COZY LUXURY.",
+      "sub_description": "Deep textures, muted tones, and festive silhouettes designed to keep you sheltered and chic from the first snow through the holidays.",
+      "image": "/assets/Collections/winter/winter.png",
+      "productIds": [5, 13, 11, 29],
+      "featured": false,
+      "order": 4
+    }
+  ]
+  
+}
