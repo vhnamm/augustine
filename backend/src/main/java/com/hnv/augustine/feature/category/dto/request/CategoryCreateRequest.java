@@ -1,4 +1,4 @@
-package com.hnv.augustine.feature.category.dto;
+package com.hnv.augustine.feature.category.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
