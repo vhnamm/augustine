@@ -1,0 +1,186 @@
+.content{
+    margin-top: 16px;
+}
+.line {
+  min-width: 100px;
+  height: 40px;
+  margin-top: 16px;
+}
+.item_wrap{
+    padding: 28px 28px 12px 28px;
+    min-height: 120px;
+    background-color: #9ca3af;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.cashPerOrder_block{
+    background-color: #2563eb;
+     background-color: #dbeafe;
+}
+.income_block{
+    background-color: #dcfce7;
+}
+.info_wrap{
+    h5{
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    p{
+        font-size: 12px;
+        width: 100%;
+    }
+}
+.totalOrder_block{
+    background-color: #f8fafc;
+    background-color: #ffedd5;
+}
+.summary_icon{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+.icon{
+    font-size: 18px;
+    color: var(--text);
+}
+
+.chart_wrap{
+    
+    background-color: var(--text);
+    padding: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+.chart {
+  height: 260px;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  
+}
+
+.bar {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+  }
+}
+
+.barGray,
+.barBlack {
+  width: 70%;
+  
+}
+
+.barGray {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  background-color: #cfcfcf;
+}
+
+.barBlack {
+     border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  background-color: #ffffff;
+}
+
+.top_prod_wrap{
+    padding-top: 20px;
+    padding-left: 12px;
+
+    p{
+        color: #111827;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+}
+
+.product_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    span{
+        color: var(--text);
+    }
+}
+.product_list{
+    max-height: 320px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+     width: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 254, 254, 0.6);
+        border-radius: 8px;
+    }
+}
+.prod_info_wrap{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.prod_img{
+    width: 76px;
+    height: 76px;
+    background-image: url("/assets/Him/AoThun/AoThunSSS/sssDen1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+}
+.prod_name{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.newOrder_wrap{
+    margin-top: 24px;
+}
+.table_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #9ca3af;
+    width: 100%;
+    p{
+        color: #6b7280;
+        font-size: 13px;
+    }
+}
+.order_list{
+    width: 100%;
+    margin-top: 15px;
+}
+.order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    p{
+        color: #111827;
+        font-size: 13px;
+        font-weight: 500;
+    }
+}

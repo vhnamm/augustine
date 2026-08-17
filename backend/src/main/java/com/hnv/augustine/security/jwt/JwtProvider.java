@@ -30,11 +30,11 @@ public class JwtProvider {
         return Keys.hmacShaKeyFor(decodedKey);
     }
 
-    public String generateJwtToken(Authentication authentication) {
+    public String generateJwtToken(User user) {
         String token = Jwts
                 .builder()
-                .subject(authentication.getName())
-                .claim("role", List.of(((User) authentication.getPrincipal()).getRole().getName()))
+                .subject(user.getFullName())
+                .claim("role", List.of(user.getRole().getName()))
                 .issuer("hnv")
                 .issuedAt(Date.from(Instant.now()))
                 .expiration(Date.from(Instant.now().plusMillis(accessExpiration)))

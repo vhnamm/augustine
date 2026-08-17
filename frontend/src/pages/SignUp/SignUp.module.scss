@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$bg-color: #f8fafc;
+$card-bg: #ffffff;
+$text-light: #111827;
+$text-dim: #6b7280;
+$accent-color: #111827;
+$border-color: #d1d5db;
+
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+$font-logo:  'IM Fell DW Pica', serif;
+$font-body: 'PT Sans', sans-serif;
+
+html{
+    font-size: 11px;
+}
+
+/* Modal OTP renders via portal to document.body, so styles live at top level (not nested in .signUpCard) */
+.otpModal {
+    :global {
+        .ant-modal-content {
+            border-radius: 1rem;
+            padding: 2rem;
+            font-family: $font-body;
+        }
+    }
+}
+
+.otpCloseIcon {
+    font-size: 1.4rem;
+    color: $text-dim;
+    line-height: 1;
+}
+
+.otpModalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+
+    h2 {
+        font-family: $font-logo;
+        font-size: 1.6rem;
+        color: $accent-color;
+        margin: 0;
+    }
+
+    p {
+        color: $text-dim;
+        font-size: 0.95rem;
+        margin: 0;
+
+        strong {
+            color: $text-light;
+        }
+    }
+}
+
+.otpInput {
+    :global {
+        .ant-otp-input {
+            width: 3rem;
+            height: 3.25rem;
+            font-size: 1.3rem;
+            border-radius: 0.75rem;
+            border: 1px solid $border-color;
+            background: #f9fafb;
+
+            &:focus {
+                border-color: $accent-color;
+                box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+            }
+        }
+    }
+}
+
+.otpActions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.otpResendBtn {
+    height: 3rem;
+    border-radius: 0.75rem;
+    border: 1px solid $border-color;
+    color: $text-light;
+    font-weight: 600;
+}
+
+.otpConfirmBtn {
+    height: 3rem;
+    border-radius: 0.75rem;
+    background-color: $accent-color;
+    border: none;
+    font-weight: 600;
+
+    &:hover {
+        background-color: #1f2937 !important;
+    }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animateEnter {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    will-change: opacity, transform; 
+    
+}
+
+.signUpContainer {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-light;
+    font-family: $font-body;
+    padding: 0 1rem 2rem;
+
+    .brandLogo {
+        width: 100%;
+        text-align: center;
+        font-family: $font-logo;
+        font-weight: 400;
+        font-size: 2.2rem;
+        font-style: italic;
+        margin-bottom: 2rem;
+        margin-top: 3.5rem;
+        color: $accent-color;
+
+        @media (max-width: 768px) {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+    }
+}
+
+
+.signUpCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 34rem);
+    background-color: $card-bg;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+    border: 1px solid $border-color;
+    padding: 2.5rem 2rem;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 2rem 1.25rem;
+    }
+
+    .btnBack {
+        font-size: 1rem;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        color: $text-light;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+
+        @media (max-width: 768px) {
+            top: 1rem;
+            left: 1rem;
+            font-size: 0.9rem;
+        }
+
+        &:hover { transform: translateX(-2px); }
+    }
+
+    .btnSkip {
+        font-size: 1rem;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        color: $text-light;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+
+        @media (max-width: 768px) {
+            top: 1rem;
+            right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        &:hover { transform: translateX(2px); }
+    }
+
+    .headerText {
+        text-align: center;
+        margin-bottom: 1.25rem;
+        width: 100%;
+
+        h1 {
+            font-family: $font-logo;
+            font-size: 1.8rem;
+            font-style: normal;
+            margin-bottom: 0.5rem;
+            color: $accent-color;
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem;
+                padding: 0 1rem;
+            }
+        }
+
+        p {
+            color: $text-dim;
+            font-size: 0.95rem;
+        }
+    }
+
+    .signUpForm {
+        width: 100%;
+        max-width: 28rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin: 0 auto;
+    }
+
+.inputGroup {
+    position: relative;
+    width: 100%;
+
+    :global {
+        .ant-input,
+        .ant-input-affix-wrapper {
+            width: 100%;
+            background: #f9fafb;
+            border: 1px solid $border-color;
+            border-radius: 0.75rem;
+            padding: 0.95rem 1rem;
+            color: $text-light;
+            font-size: 1.2rem;
+            font-family: $font-sans;
+            outline: none;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+            @media (max-width: 768px) {
+                font-size: 0.95rem;
+            }
+
+            &::placeholder,
+            input::placeholder {
+                color: $text-dim;
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
+            /* 1. FOCUS BÌNH THƯỜNG (Chỉ áp dụng khi KHÔNG có lỗi) */
+            &:not(.ant-input-status-error) {
+                &:focus,
+                &:focus-within,
+                &.ant-input-affix-wrapper-focused {
+                    border-color: $accent-color !important;
+                    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08) !important;
+                }
+            }
+
+            /* 2. TRẠNG THÁI BỊ LỖI (Ant Design tự gắn class .ant-input-status-error) */
+            &.ant-input-status-error {
+                border-color: #ff4d4f !important; // Màu đỏ chuẩn của Ant Design
+
+                &:focus,
+                &:focus-within,
+                &.ant-input-affix-wrapper-focused {
+                    border-color: #ff4d4f !important;
+                    box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.15) !important; // Shadow đỏ mờ khi click vào ô lỗi
+                }
+            }
+        }
+
+        /* Reset thẻ input con bên trong Input.Password */
+        .ant-input-affix-wrapper > input.ant-input {
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            outline: none !important;
+            box-shadow: none !important;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
+
+        .ant-input-suffix {
+            color: $text-dim;
+        }
+    }
+}
+
+    .submitBtn {
+        text-align: center;
+        width: 100%;
+        height: 3.25rem;
+        margin-top: 0.5rem;
+        background-color: $accent-color;
+        color: #ffffff;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #1f2937;
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+    .formError {
+        color: #dc2626;
+        font-size: 0.9rem;
+        margin: -0.25rem 0 0;
+        text-align: center;
+    }
+
+    .socialLogin {
+        width: 100%;
+        max-width: 28rem;
+        margin-top: 0.75rem;
+        text-align: center;
+
+        .dividerText {
+            font-size: 0.875rem;
+            color: $text-dim;
+            margin-bottom: 0.75rem;
+        }
+
+        .socialBtn {
+            width: 100%;
+            min-height: 3rem;
+            border-radius: 0.75rem;
+            background: #ffffff;
+            border: 1px solid $border-color;
+            color: $text-light;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+            &:hover {
+                transform: translateY(-1px);
+                border-color: $accent-color;
+                box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+            }
+        }
+    }
+
+    .acceptTerms, .toLogin {
+        margin-top: 0.75rem;
+        font-size: 0.875rem;
+        color: $text-dim;
+        text-align: center;
+
+        a {
+            color: $accent-color;
+            text-decoration: none;
+            margin-left: 0.3rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+
+            &:hover { border-bottom-color: $accent-color; }
+        }
+    }
+
+    .categoryGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 3rem; 
+        width: 100%;
+        margin-bottom: 2rem;
+
+        flex: 1; 
+        overflow-y: auto; 
+        min-height: 0;
+        padding: 0.5rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 0.8rem;
+        }
+
+        .categoryCard {
+            aspect-ratio: 371 / 414; 
+            width: 100%; 
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid $border-color;
+
+            position: relative; 
+            top: 0;
+            z-index: 1;
+            
+            background-size: cover;
+            background-position:center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 1rem;
+
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: $text-light; 
+            font-family: $font-body;
+
+            filter: grayscale(100%);
+            transition:
+                transform 0.3s ease-in-out,
+                background-color 0.3s ease-in-out, 
+                border-color 0.3s ease-in-out, 
+                box-shadow 0.3s ease-in-out,
+                filter 0.3s ease-in-out;
+            
+            @media (max-width: 768px) {
+                font-size: 1rem;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4); 
+                border-radius: 8px; 
+                z-index: -1; 
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            &:hover {
+                border-color: $text-light;
+                scale:1.02;
+                filter: grayscale(0);
+                
+                &::before {
+                    background-color: rgba(17, 24, 39, 0.08);
+                }
+            }
+
+            &.active {
+                border-color: $text-light;
+                color: $text-light;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                scale:1.01;
+                filter: grayscale(0);
+
+                &::before {
+                    background-color: rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

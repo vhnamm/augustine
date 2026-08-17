@@ -2,11 +2,12 @@ package com.hnv.augustine.config;
 
 import com.hnv.augustine.security.jwt.CustomAuthenticationEntryPoint;
 import com.hnv.augustine.security.jwt.JwtAuthenticationFilter;
+import com.hnv.augustine.security.oauth2.CustomOauth2FailureHandler;
+import com.hnv.augustine.security.oauth2.CustomOauth2SuccessHandler;
+import com.hnv.augustine.security.oauth2.CustomOidcUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -24,6 +25,10 @@ import java.util.List;
 public class SecurityConfig {
     private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final CustomOidcUserService customOidcUserService;
+    private final CustomOauth2SuccessHandler customOauth2SuccessHandler;
+    private final CustomOauth2FailureHandler  customOauth2FailureHandler;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -36,6 +41,14 @@ public class SecurityConfig {
                                 .anyRequest().authenticated()
 
                  )
+                .oauth2Login(oauth2 -> {
+                    oauth2
+                            .userInfoEndpoint(userInfo ->
+                                    userInfo.oidcUserService(customOidcUserService))
+                            .successHandler(customOauth2SuccessHandler)
+                            .failureHandler(customOauth2FailureHandler);
+
+                })
                 .exceptionHandling(exception ->
                         exception.authenticationEntryPoint(customAuthenticationEntryPoint)
                 );
@@ -55,10 +68,5 @@ public class SecurityConfig {
         source.registerCorsConfiguration("/**", corsConfiguration);
 
         return source;
-    }
-
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config){
-        return config.getAuthenticationManager();
     }
 }

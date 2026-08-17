@@ -30,6 +30,7 @@ CREATE TABLE users (
     password   VARCHAR(255) NULL,
     full_name   VARCHAR(50) NOT NULL,
     avatar     VARCHAR(255),
+    google_id VARCHAR(50),
     role_id    INT  NOT NULL,
     locked     BOOLEAN      NOT NULL DEFAULT FALSE,
     created_at TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,

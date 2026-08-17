@@ -29,6 +29,7 @@ public class GlobalExceptionHandler {
         return buildResponse(ErrorCode.UNAUTHENTICATED);
     }
 
+    @ExceptionHandler()
     private ResponseEntity<ApiResponse<Void>> buildResponse(ErrorCode errorCode) {
         ApiResponse<Void> body = ApiResponse.<Void>builder()
                 .success(false)
@@ -38,4 +39,6 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(errorCode.getHttpStatus()).body(body);
     }
+
+
 }

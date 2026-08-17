@@ -46,6 +46,7 @@ public class OtpServiceImpl implements OtpService {
         redisService.delete(key);
     }
     private String getRandomOTP(){
-        return String.valueOf(new SecureRandom().nextInt(1000000) + 100000);
+
+        return String.valueOf(new SecureRandom().nextInt(900000) + 100000);
     }
 }

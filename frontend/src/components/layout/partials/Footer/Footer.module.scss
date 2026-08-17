@@ -1,0 +1,82 @@
+.wrapper {
+  min-height: 800px;
+  background-color: #e5e7eb;
+  width: 100vw;
+}
+
+.update_wrap {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  align-items: center;
+  h3 {
+    font-size: 2.2rem;
+    color: #111827;
+  }
+
+  h4 {
+    color: #111827;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+
+.about_wrap {
+  margin-top: 200px;
+}
+.item_wrap {
+  h3 {
+    font-size: 1.8rem;
+    color: #111827;
+    margin-bottom: 12px;
+  }
+
+  li {
+    font-size: 1.4rem;
+    color: #111827;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+}
+
+.social_wrap {
+  margin-top: 100px;
+  .icon {
+    font-size: 2rem;
+    color: #111827;
+    margin-right: 12px;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #111827;
+    margin-top: 12px;
+  }
+}
+
+.footer {
+  h2 {
+    padding-bottom: 100px;
+    margin-top: 100px;
+    font-size: 7rem;
+    text-align: center;
+    color: #111827;
+    font-family: "IM FELL DW Pica";
+    font-style: italic;
+    letter-spacing: 40px;
+  }
+}
+
+.email_frm {
+  background-color: transparent;
+  color: #111827;
+  width: 260px;
+  margin-top: 26px;
+  border-bottom: 1px solid #fff;
+  &::placeholder {
+    color: #111827;
+  }
+}

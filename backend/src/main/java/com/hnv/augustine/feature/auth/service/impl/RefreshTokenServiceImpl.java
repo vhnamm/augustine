@@ -24,12 +24,12 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
     @Value("${jwt.refresh-expiration}")
     private Long REFRESH_TOKEN_EXPIRATION_TIME;
 
-    public String create(Authentication authentication, String clientIp, String userAgent) {
+    public String create(User user, String clientIp, String userAgent) {
         String raw = UUID.randomUUID().toString();
 
         String tokenHash = DigestUtil.sha256(raw);
         RefreshToken refreshToken = RefreshToken.builder()
-                .user((User) authentication.getPrincipal())
+                .user(user)
                 .clientIp(clientIp)
                 .userAgent(userAgent)
                 .tokenHash(tokenHash)

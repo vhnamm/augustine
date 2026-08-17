@@ -1,0 +1,223 @@
+$bg-color: #f8fafc;
+$card-bg: #1f1f1f;
+$text-color: #111827;
+$text-muted: #64748b;
+$accent-font: "Times New Roman", serif;
+$base-font: 'Helvetica Neue', sans-serif;
+$border-color: #e5e7eb; 
+$btn-bg-light: #e0e0e0;
+
+.detailsPage {
+  background-color: $bg-color;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: $text-color;
+  font-family: $base-font;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+  .backBtn {
+    display: inline-block;
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: $text-color;
+    font-size: 1.6rem;
+    font-family: $accent-font;
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+    &:hover { scale: 1.05; }
+  }
+}
+
+.formCard {
+  background-color: $card-bg;
+  border-radius: 8px;
+  padding: 40px 60px;
+  margin-bottom: 30px;
+
+  @media (max-width: 600px) {
+    padding: 30px 20px;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+
+  label {
+    font-size: 1.2rem;
+    color: $text-muted;
+    margin-bottom: 10px;
+  }
+
+  input, select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    color: $text-color;
+    font-size: 1.6rem;
+    padding: 10px 0;
+    font-family: $base-font;
+    width: 100%;
+    outline: none; 
+
+    &::placeholder {
+      color: darken($text-muted, 20%);
+    }
+
+    &:focus {
+      border-bottom-color: $text-color; 
+      transition: border-color 0.3s;
+    }
+  }
+}
+
+.formRow {
+  display: flex;
+  gap: 40px;
+  
+  .inputGroup {
+    flex: 1;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.threeColRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px; 
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .inputGroup {
+    margin-bottom: 0; 
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .selectWrapper {
+    position: relative;
+    
+    &::after {
+      content: 'v';
+      position: absolute;
+      right: 0;
+      top: 10px;
+      color: $text-muted;
+      font-size: 1.2rem;
+      pointer-events: none; 
+      transform: scaleX(1.5) scaleY(0.8); 
+    }
+
+    select {
+      color: #948f8f;
+      appearance: none; 
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+
+  .checkboxLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $text-color;
+    font-size: 1.2rem;
+    user-select: none;
+
+    input {
+      display: none;
+    }
+
+    .checkmark {
+      height: 18px;
+      width: 18px;
+      background-color: transparent;
+      border: 1px solid #6b7280;
+      border-radius: 2px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input:checked ~ .checkmark {
+      background-color: $text-color;
+      border-color: $text-color;
+
+      &::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: $bg-color;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+    }
+    
+    &:hover .checkmark {
+      border-color: #6b7280;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 20px;
+  margin-top: 0px;
+
+  button {
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: $base-font;
+  }
+
+  .discardBtn {
+    background: transparent;
+    border: 1px solid #444;
+    color: $text-color;
+
+    &:hover {
+      border-color: #111827;
+    }
+  }
+
+  .saveBtn {
+    background-color: $btn-bg-light; 
+    border: none;
+    color: #111827;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
